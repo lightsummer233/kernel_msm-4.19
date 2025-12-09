@@ -20,7 +20,6 @@
 #include "msm8953-qrd-sku3.dtsi"
 #include "msm8953-mdss-panels.dtsi"
 #include "msm8953-camera-sensor-qrd.dtsi"
-#include "msm8953-gpu-sdm632.dtsi"
 
 #include "../../../../../../techpack/xiaomi-titanium/kernel/dts/xiaomi-titanium/common/common.dtsi"
 #include "../../../../../../techpack/xiaomi-titanium/kernel/dts/xiaomi-titanium/vince/vince.dtsi"

@@ -17,7 +17,6 @@
 #include "pmi8940.dtsi"
 #include "msm8953-mtp.dtsi"
 #include "msm8953-pmi8940.dtsi"
-#include "msm8953-gpu-sdm632.dtsi"
 
 #include "../../../../../../techpack/xiaomi-titanium/kernel/dts/xiaomi-titanium/common/common.dtsi"
 #include "../../../../../../techpack/xiaomi-titanium/kernel/dts/xiaomi-titanium/ysl/ysl.dtsi"
