@@ -1,0 +1,4 @@
+[submodule "techpack/xiaomi-titanium"]
+	path = techpack/xiaomi-titanium
+	url = https://github.com/Project-Nightcord/techpack_xiaomi-titanium
+	branch = ysl/4.19/master
