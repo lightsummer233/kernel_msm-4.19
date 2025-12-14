@@ -240,7 +240,6 @@ static int tas2557_codec_probe(struct snd_soc_component *pCodec)
 
 static void tas2557_codec_remove(struct snd_soc_component *pCodec)
 {
-	return 0;
 }
 
 static int tas2557_power_ctrl_get(struct snd_kcontrol *pKcontrol,
