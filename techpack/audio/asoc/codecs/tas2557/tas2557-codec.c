@@ -203,22 +203,20 @@ static int tas2557_hw_params(struct snd_pcm_substream *pSubstream,
 
 static int tas2557_set_dai_fmt(struct snd_soc_dai *pDAI, unsigned int nFormat)
 {
-	struct snd_soc_component *pCodec = pDAI->component;
+	struct snd_soc_component *component = pDAI->component;
 	struct tas2557_priv *pTAS2557 = snd_soc_component_get_drvdata(component);
 
 	dev_dbg(pTAS2557->dev, "%s\n", __func__);
-	printk( "%s\n", __func__);
 	return 0;
 }
 
 static int tas2557_prepare(struct snd_pcm_substream *pSubstream,
 	struct snd_soc_dai *pDAI)
 {
-	struct snd_soc_component *pCodec = pDAI->component;
+	struct snd_soc_component *component = pDAI->component;
 	struct tas2557_priv *pTAS2557 = snd_soc_component_get_drvdata(component);
 
 	dev_dbg(pTAS2557->dev, "%s\n", __func__);
-	printk( "%s\n", __func__);
 	return 0;
 }
 
@@ -226,7 +224,6 @@ static int tas2557_set_bias_level(struct snd_soc_component *pCodec,
 	enum snd_soc_bias_level eLevel)
 {
 	struct tas2557_priv *pTAS2557 = snd_soc_component_get_drvdata(pCodec);
-	printk( "%s\n", __func__);
 
 	dev_dbg(pTAS2557->dev, "%s: %d\n", __func__, eLevel);
 	return 0;
@@ -241,7 +238,7 @@ static int tas2557_codec_probe(struct snd_soc_component *pCodec)
 	return 0;
 }
 
-static int tas2557_codec_remove(struct snd_soc_component *pCodec)
+static void tas2557_codec_remove(struct snd_soc_component *pCodec)
 {
 	return 0;
 }
