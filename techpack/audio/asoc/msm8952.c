@@ -84,7 +84,7 @@ extern int msm_hs_ext_pa_ctrl(struct msm_asoc_mach_data *pdatadata, bool value);
 static struct wcd_mbhc_config mbhc_cfg = {
 	.read_fw_bin = false,
 	.calibration = NULL,
-	.detect_extn_cable = true,
+	.detect_extn_cable = false,
 	.mono_stero_detection = false,
 	.swap_gnd_mic = NULL,
 	.hs_ext_micbias = false,
@@ -1721,16 +1721,16 @@ static void *def_msm8952_wcd_mbhc_cal(void)
 	 * 210-290 == Button 2
 	 * 360-680 == Button 3
 	 */
-	btn_low[0] = 100;
-	btn_high[0] = 100;
-	btn_low[1] = 200;
-	btn_high[1] = 200;
-	btn_low[2] = 450;
-	btn_high[2] = 450;
-	btn_low[3] = 500;
-	btn_high[3] = 500;
-	btn_low[4] = 500;
-	btn_high[4] = 500;
+	btn_low[0] = 91;
+	btn_high[0] = 91;
+	btn_low[1] = 259;
+	btn_high[1] = 259;
+	btn_low[2] = 488;
+	btn_high[2] = 488;
+	btn_low[3] = 488;
+	btn_high[3] = 488;
+	btn_low[4] = 488;
+	btn_high[4] = 488;
 
 	return msm8952_wcd_cal;
 }
