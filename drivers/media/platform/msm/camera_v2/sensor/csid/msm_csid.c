@@ -148,7 +148,7 @@ static int msm_csid_cid_lut(
 			(csid_lut_params->vc_cfg[i]->cid >> 2) * 4,
 			csid_dev->pdev->id);
 
-		val = (csid_lut_params->vc_cfg[i]->decode_format << 4) | 0x3;
+		val = (csid_lut_params->vc_cfg[i]->decode_format << 4) | 0x1;
 		msm_camera_vio_w(val, csid_dev->base,
 			csid_dev->ctrl_reg->csid_reg.csid_cid_n_cfg_addr +
 			(csid_lut_params->vc_cfg[i]->cid * 4),
@@ -493,9 +493,10 @@ static int msm_csid_config(struct csid_device *csid_dev,
 			    csid_dev->ctrl_reg->csid_reg.csid_core_ctrl_1_addr,
 				csid_dev->pdev->id);
 		}
+#if 0
 		if (csid_dev->hw_version >= CSID_VERSION_V35 &&
 			csid_params->csi_3p_sel == 1) {
-			csid_dev->csid_3p_enabled = 1;
+			csid_dev->csid_3p_enabled = 0;
 			val = (csid_params->lane_cnt - 1) << ENABLE_3P_BIT;
 
 			for (i = 0; i < csid_params->lane_cnt; i++) {
@@ -511,6 +512,7 @@ static int msm_csid_config(struct csid_device *csid_dev,
 			    csid_dev->ctrl_reg->csid_reg.csid_3p_ctrl_0_addr,
 				csid_dev->pdev->id);
 		}
+#endif
 	}
 
 	rc = msm_csid_cid_lut(&csid_params->lut_params, csid_dev);
